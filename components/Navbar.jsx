@@ -32,7 +32,7 @@ const Navbar = () => {
 
   return (
     <div
-    style={{backgroundColor: `${navBg}`}}
+      style={{ backgroundColor: `${navBg}` }}
       className={
         shadow
           ? 'fixed w-full h-20 shadow-xl z-[100] ease-in-out duration-300'
@@ -45,7 +45,7 @@ const Navbar = () => {
         </Link>
 
         <div>
-          <ul style={{color: `${linkColor}`}} className='hidden md:flex'>
+          <ul style={{ color: `${linkColor}` }} className='hidden md:flex'>
             <Link href='/'>
               <li className='ml-10 text-sm uppercase hover:border-b'>Home</li>
             </Link>
@@ -105,24 +105,34 @@ const Navbar = () => {
           <div className='py-4 flex flex-col'>
             <ul className='uppercase'>
               <Link href='/'>
-                <li onClick={()=> setNav(false)} className='py-4 text-sm'>Home</li>
+                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                  Home
+                </li>
               </Link>
               <Link href='/#about'>
-                <li onClick={()=> setNav(false)} className='py-4 text-sm'>About</li>
+                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                  About
+                </li>
               </Link>
               <Link href='/#skills'>
-                <li onClick={()=> setNav(false)} className='py-4 text-sm'>Skills</li>
+                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                  Skills
+                </li>
               </Link>
               <Link href='/#projects'>
-                <li onClick={()=> setNav(false)} className='py-4 text-sm'>Projects</li>
+                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                  Projects
+                </li>
               </Link>
               <Link href='/#contact'>
-                <li onClick={()=> setNav(false)} className='py-4 text-sm'>Contact</li>
+                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                  Contact
+                </li>
               </Link>
             </ul>
             <div className='pt-40'>
               <p className='uppercase tracking-widest text-[#5651e5]'>
-                Let's Connect
+                Let&#39s Connect
               </p>
               <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-150'>
