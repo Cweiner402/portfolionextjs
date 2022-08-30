@@ -31,7 +31,7 @@ const property = () => {
             app is for the active person that constantly forgets their grocery
             list. Although there are many applications that can make a list none
             not only build a list for you but allow you to create a schedule for
-            those meals and pushed to each family member's phone.
+            those meals and pushed to each family member&#39;s phone.
           </p>
           <a
             href='https://github.com/cweiner402'

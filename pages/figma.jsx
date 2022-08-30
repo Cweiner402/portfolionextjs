@@ -25,14 +25,14 @@ const property = () => {
 
           <br />
           <p>
-            Figma is one of the best tools I've had the privilege to use. After
-            adopting Figma as my sole UX design and StoryBoarding tool I have I
-            saw an amazing transformation for my team. By using Figma design and
-            Storyboarding I have completely changed my relationship with every
-            customer I speak with. Giving the customer the power to not only
-            design their end result but also communicate the process they need
-            to follow to best suit their business needs before even starting
-            development. By focusing on their business as a process First we
+            Figma is one of the best tools I&#39;ve had the privilege to use.
+            After adopting Figma as my sole UX design and StoryBoarding tool I
+            have I saw an amazing transformation for my team. By using Figma
+            design and Storyboarding I have completely changed my relationship
+            with every customer I speak with. Giving the customer the power to
+            not only design their end result but also communicate the process
+            they need to follow to best suit their business needs before even
+            starting development. By focusing on their business as a process we
             reduce development time, rework, and cost significantly.
           </p>
           <br />
@@ -40,12 +40,12 @@ const property = () => {
             This mindset and project planning process is one of the best ways to
             handle legacy solutions as well. It helps not only start the
             conversation but empowers the business team to really attack the
-            phrase "Because that's the way we've always done it". This
-            methodology and process gives everyone a voice to really dive into
-            what they need, what they want, and what is something that has
-            always been done. All while giving some of the best training
-            foundation for teams for those throughout a small business or even a
-            Enterprise.
+            phrase &#34;Because that&#39;s the way we&#39;ve always done
+            it&#34;. This methodology and process gives everyone a voice to
+            really dive into what they need, what they want, and what is
+            something that has always been done. All while giving some of the
+            best training foundation for teams for those throughout a small
+            business or even a Enterprise.
           </p>
         </div>
         <div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl py-4'>

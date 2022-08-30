@@ -15,12 +15,14 @@ const About = () => {
           </p>
           <h2 className='py-4'>Who I Am</h2>
 
-          <p className='py-2 text-gray-600'>"A not so typical tech dude"</p>
+          <p className='py-2 text-gray-600'>
+            &#34;A not so typical tech dude&#34;
+          </p>
 
           <p className='py-2 text-gray-600'>
-            In the last 10 years, I have experienced a diverse career path. I’ve
-            navigated through engineering, construction, and technology until
-            finding my niche in delivering enterprise solutions.
+            In the last 10 years, I have experienced a diverse career path.
+            I&#39;ve navigated through engineering, construction, and technology
+            until finding my niche in delivering enterprise solutions.
           </p>
           <p className='py-2 text-gray-600'>
             Fresh from high school, I enrolled in a mechanical engineering
