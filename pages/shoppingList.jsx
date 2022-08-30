@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import dronePhoto from '../public/assets/dronePhoto.jpg'
+import ShopList from '../public/assets/shoppingListUnderconst.png'
 import { RiRadioButtonFill } from 'react-icons/ri'
 import Link from 'next/link'
 
@@ -13,12 +13,12 @@ const property = () => {
           className='absolute z-1'
           layout='fill'
           objectFit='cover'
-          src={dronePhoto}
+          src={ShopList}
           alt='/'
         />
         <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
-          <h2 className='py-2'>UAS Drone Maintenance </h2>
-          <h3>Next JS / Tailwind / SQL / OAuth / Google / .NET Core</h3>
+          <h2 className='py-2'>Grocery List App</h2>
+          <h3>React JS / Tailwind / Firebase</h3>
         </div>
       </div>
 
@@ -27,20 +27,20 @@ const property = () => {
           <h2>Project Overview</h2>
           <br />
           <p>
-            This app was built using Next JS and is hosted on Google. Users are
-            able to create a profile to plan missions, track progress of
-            projects, submit supporting documentation to insure proper handling
-            of flights. Once a project is complete the project can be found on a
-            map or searched for as needed. Future design will also host actual
-            flight logs and images/video from each flight for easy access to
-            demo or review.
+            This app was built using React JS and is hosted on Firebase. This
+            app is for the active person that constantly forgets their grocery
+            list. Although there are many applications that can make a list none
+            not only build a list for you but allow you to create a schedule for
+            those meals and pushed to each family members phone.
           </p>
-
           <a
-            href='https://uasf-light-maint.vercel.app/'
+            href='https://github.com/cweiner402'
             target='_blank'
             rel='noreferrer'
           >
+            <button className='px-8 py-2 mt-4 mr-8'>Code</button>
+          </a>
+          <a href='' target='_blank' rel='noreferrer'>
             <button className='px-8 py-2 mt-4'>Demo</button>
           </a>
         </div>
@@ -58,13 +58,7 @@ const property = () => {
                 <RiRadioButtonFill className='pr-1' /> Javascript
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> SQL
-              </p>
-              <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Google API
-              </p>
-              <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Custom .Net Core API
+                <RiRadioButtonFill className='pr-1' /> Firebase
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
                 <RiRadioButtonFill className='pr-1' /> Vercel
