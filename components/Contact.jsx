@@ -63,7 +63,6 @@ const Contact = () => {
                       <FaLinkedinIn />
                     </div>
                   </a>
-                
 
                   <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
                     <AiOutlineMail />
@@ -133,7 +132,7 @@ const Contact = () => {
                     name='message'
                   ></textarea>
                 </div>
-                
+
                 <button className='w-full p-4 text-gray-100 mt-4'>
                   Send Message
                 </button>

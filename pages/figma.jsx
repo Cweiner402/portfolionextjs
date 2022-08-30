@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import Figma from '../public/assets/storBoard.png'
+import figma from '../public/assets/storBoard.png'
 
 import { RiRadioButtonFill } from 'react-icons/ri'
 import Link from 'next/link'
@@ -14,7 +14,7 @@ const property = () => {
           className='absolute z-1'
           layout='fill'
           objectFit='cover'
-          src={Figma}
+          src={figma}
           alt='/'
         />
       </div>

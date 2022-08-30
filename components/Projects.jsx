@@ -3,9 +3,9 @@ import Link from 'next/link'
 import React from 'react'
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi'
 import dronePhoto from '../public/assets/dronePhoto.jpg'
-import shopList from '../public/assets/shoppingListUnderconst.png'
-import figma from '../public/assets/storBoard.png'
-import uform from '../public/assets/onBaseUnityform.png'
+import ShopList from '../public/assets/shoppingListUnderconst.png'
+import Figma from '../public/assets/storBoard.png'
+import Uform from '../public/assets/onBaseUnityform.png'
 
 import ProjectItem from './ProjectItem'
 
@@ -26,19 +26,19 @@ const Projects = () => {
           />
           <ProjectItem
             title='Shopping List App'
-            backgroundImg={shopList}
+            backgroundImg={ShopList}
             projectUrl='/shoppingList'
             tech='React JS/Firebase'
           />
           <ProjectItem
             title='StoryBoard Project Planning'
-            backgroundImg={figma}
+            backgroundImg={Figma}
             projectUrl='/figma'
             tech='Figma Design'
           />
           <ProjectItem
             title='Shared OnBase Web Form '
-            backgroundImg={uform}
+            backgroundImg={Uform}
             projectUrl='/uform'
             tech='Hyland OnBase / SQL '
           />
