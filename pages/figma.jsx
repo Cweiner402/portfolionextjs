@@ -21,20 +21,19 @@ const property = () => {
       <div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8'>
         <div className='col-span-4'>
           <h2 className='py-2'>Figma UX and StoryBoard Design</h2>
-            <h3>Figma / UX </h3>
-        
+          <h3>Figma / UX </h3>
 
           <br />
           <p>
-            Figma is one of the best tools i've had the priveledge to use. After
-            adopting Figma as my sole UX design and StoryBoarding tool I have
-            seen an amazing transformation for my team. By using Figma design
-            and Storyboarding I have completely changed my relationship with
-            every customer I speak with. Giving the customer the power to not
-            only design their end result but also communicate the process they
-            need to follow to best suit their business needs before even
-            starting development. By focusing on their business as a process
-            first we reduce development time, rework, and cost significantly.
+            Figma is one of the best tools I've had the privilege to use. After
+            adopting Figma as my sole UX design and StoryBoarding tool I have I
+            saw an amazing transformation for my team. By using Figma design and
+            Storyboarding I have completely changed my relationship with every
+            customer I speak with. Giving the customer the power to not only
+            design their end result but also communicate the process they need
+            to follow to best suit their business needs before even starting
+            development. By focusing on their business as a process First we
+            reduce development time, rework, and cost significantly.
           </p>
           <br />
           <p>
@@ -45,7 +44,7 @@ const property = () => {
             methodology and process gives everyone a voice to really dive into
             what they need, what they want, and what is something that has
             always been done. All while giving some of the best training
-            foundation for teams for those thorughout a small business or even a
+            foundation for teams for those throughout a small business or even a
             Enterprise.
           </p>
         </div>

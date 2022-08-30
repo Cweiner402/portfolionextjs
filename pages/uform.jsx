@@ -29,17 +29,17 @@ const property = () => {
           <p>
             This Web Form is but the tip of the iceberg of a multi solution
             system to best handle a need to both apply to be a consultant for
-            the Sate Of Nebraska Department of Transportation and recertify
-            existing consulants as needed per state legislation. This is a
+            the State Of Nebraska Department of Transportation and recertify
+            existing consultants as needed per state legislation. This is a
             public Unity Form created in OnBase. After being submitted this form
             is ingested into the software OnBase created by Hyland Resources.
             Once ingested the form is placed in a workflow to handle multiple
-            approvals from different agencies thorughout the state. After
+            approvals from different agencies throughout the state. After
             approvals data from this form is parse into a workview application
-            for data visualation and reporting. On a timed based this data is
+            for data visualization and reporting. On a timed based this data is
             then picked up via a custom API which uses a 3rd party service to
             move data into a parrel source system used by multiple agencies
-            thorughout the State of nebraska.{' '}
+            throughout the State of nebraska.
           </p>
           <a
             href='https://ecmndotp.nebraska.gov/AppNet/UnityForm.aspx?d1=AUa0ClL0IqmxC6%2fkg2eabc5fV7whHlz1uRYJnxa2QQNghSbbE1fWEfNg7PB%2bQIxvcksj%2bI3Clh8f914zjeWK9kyzWB4doBE0yjhqPfCq5g15rYUycJgHt3ShJYz%2b%2fSBWm5NyIXPecWfwGy03RiuYFAeLkxd1SoZPuZNdtWHbERzOko8Eg7bBMMdXiFK221wse%2fZq2CEiYcDQzPqp6fbEWa6bse6skc56kwmyttRry2M%2b'
