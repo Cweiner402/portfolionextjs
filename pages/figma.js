@@ -1,9 +1,10 @@
 import Image from 'next/image'
 import React from 'react'
+import Link from 'next/link'
 import figma from '../public/assets/storBoard.png'
 
 import { RiRadioButtonFill } from 'react-icons/ri'
-import Link from 'next/link'
+
 
 const property = () => {
   return (
