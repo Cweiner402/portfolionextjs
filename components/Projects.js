@@ -22,25 +22,32 @@ const Projects = () => {
             title='Drone App'
             backgroundImg={dronePhoto}
             projectUrl='/drone'
-            tech='React JS/NET/SQL'
+            tech='React JS/NET/SQL
+            '
           />
           <ProjectItem
             title='Shopping List App'
             backgroundImg={ShopList}
             projectUrl='/shoppingList'
             tech='React JS/Firebase'
+            width='80'
+            height='80'
           />
           <ProjectItem
             title='StoryBoard Project Planning'
             backgroundImg={Figma}
             projectUrl='/figma'
             tech='Figma Design'
+            width='80'
+            height='80'
           />
           <ProjectItem
             title='Shared OnBase Web Form '
             backgroundImg={Uform}
             projectUrl='/uform'
             tech='Hyland OnBase / SQL '
+            width='80'
+            height='80'
           />
         </div>
         <div className='flex justify-center py-12'>
