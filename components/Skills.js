@@ -12,7 +12,7 @@ import Firebase from '../public/assets/skills/firebase.png'
 import NextJS from '../public/assets/skills/nextjs.png'
 import AWS from '../public/assets/skills/aws.png'
 import AzureDev from '../public/assets/skills/azureDevOpslogo.png'
-import SQLicon from '../public/assets/skills/microsoftSQLicon.png'
+import SQLicon from '../public/assets/skills/mssqllogo.png'
 import Hyland from '../public/assets/skills/hylandlogo.png'
 
 const Skills = () => {
