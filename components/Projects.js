@@ -3,9 +3,9 @@ import Link from 'next/link'
 import React from 'react'
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi'
 import dronePhoto from '../public/assets/dronePhoto.jpg'
-import ShopList from '../public/assets/shoppingListUnderconst.png'
+import ShopList from '../public/assets/shoplistconst.png'
 import Figma from '../public/assets/storBoard.png'
-import Uform from '../public/assets/onBaseUnityform.png'
+import Uform from '../public/assets/onbaseunity.png'
 
 import ProjectItem from './ProjectItem'
 
@@ -30,24 +30,19 @@ const Projects = () => {
             backgroundImg={ShopList}
             projectUrl='/shoppingList'
             tech='React JS/Firebase'
-            width='80'
-            height='80'
+            
           />
           <ProjectItem
             title='StoryBoard Project Planning'
             backgroundImg={Figma}
             projectUrl='/figma'
             tech='Figma Design'
-            width='80'
-            height='80'
           />
           <ProjectItem
             title='Shared OnBase Web Form '
             backgroundImg={Uform}
             projectUrl='/uform'
             tech='Hyland OnBase / SQL '
-            width='80'
-            height='80'
           />
         </div>
         <div className='flex justify-center py-12'>

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import uform from '../public/assets/onBaseUnityform.png'
+import Uform from '../public/assets/onbaseunity.png'
 import { RiRadioButtonFill } from 'react-icons/ri'
 import Link from 'next/link'
 
@@ -13,7 +13,7 @@ const property = () => {
           className='absolute z-1'
           layout='fill'
           objectFit='cover'
-          src={uform}
+          src={Uform}
           alt='/'
         />
         <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
