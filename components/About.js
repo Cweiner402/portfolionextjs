@@ -20,44 +20,34 @@ const About = () => {
           </p>
 
           <p className='py-2 text-gray-600'>
-            In the last 10 years, I have experienced a diverse career path.
-            I&#39;ve navigated through engineering, construction, and technology
-            until finding my niche in delivering enterprise solutions.
+              Over the past decade, my professional journey has spanned engineering, 
+              construction, and technology, leading me to specialize in delivering comprehensive enterprise solutions.
           </p>
           <p className='py-2 text-gray-600'>
-            Fresh from high school, I enrolled in a mechanical engineering
-            program at the University of Nebraska. After completing an
-            internship, I realized I desired a career in which I could be part
-            of conception to completion of a project. It was then I decided to
-            pursue my goal of owning my own company and began working as a
-            general contractor. My construction company taught me many valuable
-            skills including the need for work-life balance and software
-            solutions. The use of software in managing payroll and cost
-            accounting piqued my interest and I took a huge risk to leave my
-            company and pursue work within the tech world.
+              Starting my journey in mechanical engineering at the University of Nebraska, 
+              I soon discovered a passion for being involved in projects from inception to completion.
+              This realization propelled me into entrepreneurship, where I founded a construction company. 
+              Here, I honed essential skills in management and discovered a growing interest in software solutions, 
+              especially in streamlining operations like payroll and cost accounting. This interest catalyzed a
+                bold shift in my career, leading me into the technology sector.
           </p>
           <p className='py-2 text-gray-600'>
-            I began my career within the industry as an intern on the QA team at
-            the State of Nebraska Department of Transportation (formerly
-            Department of Roads) designing an automated QA pipeline. I quickly
-            moved into a full time position leading numerous development
-            projects and helped with the merging of the Department of
-            Aeronautics and the Department of Roads. After the merger, my team
-            and I created a new UAS program for the agency, which has grown from
-            a localized division to six remote teams to better provide services
-            across Nebraska.
+              My tech career commenced with a QA internship at the State of Nebraska Department of Transportation, 
+              where I was instrumental in developing an automated QA pipeline. Rapidly advancing, I took on a full-time role, 
+              leading significant development projects and playing a pivotal role in the merger of the Department of Aeronautics
+              with the Department of Roads. I was also a key figure in establishing the UAS program, expanding it into a robust, 
+              multi-team operation serving all of Nebraska.
           </p>
           <p className='py-2 text-gray-600'>
-            In 2018, I received an opportunity to move into a ECM Administrator
-            role and now lead a team of senior developers in large strategic
-            projects. While I enjoy my current role, I have a passion for
-            working with customers in creating everyday solutions. It is vital
-            to me to create the best product for the customer while respecting
-            their processes, time, money, and future. My pledge to customers is
-            that I will treat their project as if it was one of my own. I will
-            deliver an effective plan, timeline, and cost estimate and they will
-            be respected and valued throughout the project.
+              Progressing in my career, I transitioned to a role as an ECM Administrator and later a Senior Consultant at Keyhole,
+              where I currently lead teams of senior developers in executing large-scale, strategic projects. 
+              I am passionate about working closely with clients, crafting solutions that align perfectly with their needs,
+                and ensuring utmost respect for their time, resources, and vision. My commitment to clients is unyielding: 
+                I treat each project with the same dedication and attention to detail as if it were my own, ensuring efficient 
+                project management, clear timelines, and transparent cost estimates.
           </p>
+
+
           <Link href='/#projects'>
             <p className='py-2 text-gray-600 underline cursor-pointer'>
               Check out some of my latest projects.
