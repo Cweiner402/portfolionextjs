@@ -187,10 +187,17 @@ const Navbar = () => {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 w-[80%] max-w-sm h-full border-l md:hidden"
-              style={{ backgroundColor: 'var(--bg-surface)', borderColor: 'var(--border-muted)' }}
+              className="fixed top-0 right-0 w-[80%] max-w-sm h-screen border-l md:hidden z-[60]"
+              style={{ 
+                backgroundColor: '#1e293b', /* solid slate-800 fallback */
+                borderColor: 'var(--border-muted)',
+                boxShadow: '-10px 0 40px rgba(0, 0, 0, 0.5)'
+              }}
             >
-              <div className="flex flex-col h-full p-8">
+              <div 
+                className="flex flex-col h-full p-8"
+                style={{ backgroundColor: '#1e293b' }} /* solid background */
+              >
                 <div className="flex justify-between items-center mb-12">
                   <div
                     className="w-10 h-10 rounded-lg flex items-center justify-center"
@@ -226,7 +233,7 @@ const Navbar = () => {
                         className="block px-4 py-3 rounded-lg text-lg font-medium transition-all"
                         style={{
                           color: activeSection === link.section ? 'var(--accent)' : 'var(--foreground-muted)',
-                          backgroundColor: activeSection === link.section ? 'rgba(59, 130, 246, 0.1)' : 'transparent'
+                          backgroundColor: activeSection === link.section ? 'rgba(59, 130, 246, 0.15)' : 'var(--bg-elevated)'
                         }}
                       >
                         {link.label}
