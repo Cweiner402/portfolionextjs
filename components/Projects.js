@@ -75,9 +75,9 @@ const Projects = () => {
 
   return (
     <section id="projects" className="section relative overflow-hidden">
-      {/* Blueprint grid background */}
+      {/* Blueprint grid background - pointer-events-none so they don't block clicks */}
       <div 
-        className="absolute inset-0 opacity-[0.02]"
+        className="absolute inset-0 opacity-[0.02] pointer-events-none"
         style={{
           backgroundImage: `
             linear-gradient(var(--blueprint-grid) 1px, transparent 1px),
@@ -86,8 +86,8 @@ const Projects = () => {
           backgroundSize: '40px 40px'
         }}
       />
-      <div className="glow glow-highlight w-[500px] h-[500px] -top-64 -left-64" />
-      <div className="glow glow-accent w-[400px] h-[400px] -bottom-32 right-0 opacity-10" />
+      <div className="glow glow-highlight w-[500px] h-[500px] -top-64 -left-64 pointer-events-none" />
+      <div className="glow glow-accent w-[400px] h-[400px] -bottom-32 right-0 opacity-10 pointer-events-none" />
       
       <div className="wrapper relative">
         <motion.div

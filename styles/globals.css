@@ -222,6 +222,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
   border-radius: 50%;
   filter: blur(120px);
   pointer-events: none;
+  pointer-events: none;
   opacity: 0.15;
 }
 

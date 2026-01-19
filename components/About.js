@@ -20,9 +20,9 @@ const About = () => {
 
   return (
     <section id="about" className="section relative overflow-hidden">
-      {/* Blueprint grid overlay */}
+      {/* Blueprint grid overlay - pointer-events-none so they don't block clicks */}
       <div 
-        className="absolute inset-0 opacity-[0.02]"
+        className="absolute inset-0 opacity-[0.02] pointer-events-none"
         style={{
           backgroundImage: `
             linear-gradient(var(--accent) 1px, transparent 1px),
@@ -33,7 +33,7 @@ const About = () => {
       />
       
       {/* Glow effects */}
-      <div className="glow glow-accent w-[400px] h-[400px] top-1/2 -right-48 opacity-10" />
+      <div className="glow glow-accent w-[400px] h-[400px] top-1/2 -right-48 opacity-10 pointer-events-none" />
       
       <div className="wrapper relative">
         <motion.div

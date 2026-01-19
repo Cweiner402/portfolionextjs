@@ -16,7 +16,10 @@ export default function Home() {
           name="description"
           content="Software architect specializing in cloud-native transformations, mobile solutions, and Agile delivery. From construction to code—building software that lasts."
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="64x64" href="/favicon-square.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-square.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon-square.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/favicon-square.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:title" content="Chris Weiner | Software Architect" />
         <meta property="og:description" content="Building software foundations that last. Cloud architecture, mobile solutions, and Agile transformation." />

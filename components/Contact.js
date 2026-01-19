@@ -18,10 +18,21 @@ const Contact = () => {
     const form = e.target
     const formData = new FormData(form)
     
+    // Convert FormData to JSON for our API
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      subject: formData.get('subject'),
+      message: formData.get('message'),
+    }
+    
     try {
-      const response = await fetch('https://getform.io/f/98bb20c4-44a3-473f-9cab-ec3ad3a8fa04', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
-        body: formData,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
       })
       
       if (response.ok) {

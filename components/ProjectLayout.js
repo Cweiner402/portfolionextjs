@@ -3,8 +3,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Head from 'next/head'
 import { motion } from 'framer-motion'
-import { HiOutlineArrowLeft, HiOutlineExternalLink } from 'react-icons/hi'
+import { HiOutlineArrowLeft, HiOutlineExternalLink, HiOutlineZoomIn } from 'react-icons/hi'
 import PhoneFrame from './PhoneFrame'
+import { useLightbox, Lightbox } from './ImageLightbox'
 
 const ProjectLayout = ({
   title,
@@ -24,6 +25,13 @@ const ProjectLayout = ({
 }) => {
   const isGif = (src) => typeof src === 'string' && src.endsWith('.gif')
   const heroIsGif = isGif(heroImage)
+  const lightbox = useLightbox()
+
+  // Collect all images for lightbox navigation
+  const allImages = [
+    ...(heroImage ? [{ image: heroImage, caption: title }] : []),
+    ...(gallery || []),
+  ]
 
   return (
     <>
@@ -84,7 +92,7 @@ const ProjectLayout = ({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="wrapper mb-12"
+            className="wrapper mb-16 lg:mb-20"
           >
             {isMobileApp ? (
               // Mobile app - show in phone frame
@@ -136,8 +144,12 @@ const ProjectLayout = ({
                   </div>
                 </div>
                 
-                {/* Media container */}
-                <div style={{ backgroundColor: 'var(--bg-base)' }}>
+                {/* Media container - clickable for lightbox */}
+                <div 
+                  style={{ backgroundColor: 'var(--bg-base)' }}
+                  className="relative group cursor-zoom-in"
+                  onClick={() => lightbox.openLightbox({ image: heroImage, caption: title }, allImages, 0)}
+                >
                   {heroIsGif ? (
                     <img
                       src={heroImage}
@@ -157,6 +169,12 @@ const ProjectLayout = ({
                       />
                     </div>
                   )}
+                  {/* Zoom indicator */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/10">
+                    <div className="p-3 rounded-full bg-black/50 text-white">
+                      <HiOutlineZoomIn size={28} />
+                    </div>
+                  </div>
                 </div>
               </div>
             )}
@@ -259,67 +277,92 @@ const ProjectLayout = ({
                     Gallery
                   </h2>
                   <div className="grid gap-6">
-                    {gallery.map((item, i) => (
-                      <div 
-                        key={i} 
-                        className="rounded-xl overflow-hidden border"
-                        style={{ backgroundColor: 'var(--bg-surface)', borderColor: 'var(--border-muted)' }}
-                      >
-                        {item.isMobile ? (
-                          // Mobile screenshot in phone frame
-                          <div className="py-8" style={{ backgroundColor: 'var(--bg-elevated)' }}>
-                            <PhoneFrame>
+                    {gallery.map((item, i) => {
+                      // Gallery index in allImages is offset by 1 if heroImage exists
+                      const lightboxIndex = heroImage ? i + 1 : i
+                      
+                      return (
+                        <div 
+                          key={i} 
+                          className="rounded-xl overflow-hidden border"
+                          style={{ backgroundColor: 'var(--bg-surface)', borderColor: 'var(--border-muted)' }}
+                        >
+                          {item.isMobile ? (
+                            // Mobile screenshot in phone frame
+                            <div 
+                              className="py-8 relative group cursor-zoom-in" 
+                              style={{ backgroundColor: 'var(--bg-elevated)' }}
+                              onClick={() => lightbox.openLightbox(item, allImages, lightboxIndex)}
+                            >
+                              <PhoneFrame>
+                                {isGif(item.image) ? (
+                                  <img
+                                    src={item.image}
+                                    alt={item.caption || title}
+                                    className="w-full h-auto"
+                                    style={{ display: 'block' }}
+                                  />
+                                ) : (
+                                  <Image
+                                    src={item.image}
+                                    alt={item.caption || title}
+                                    width={320}
+                                    height={693}
+                                    className="w-full h-auto"
+                                  />
+                                )}
+                              </PhoneFrame>
+                              {/* Zoom indicator */}
+                              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div className="p-3 rounded-full bg-black/50 text-white">
+                                  <HiOutlineZoomIn size={28} />
+                                </div>
+                              </div>
+                            </div>
+                          ) : (
+                            // Regular image - clickable for lightbox
+                            <div 
+                              style={{ backgroundColor: 'var(--bg-base)' }}
+                              className="relative group cursor-zoom-in"
+                              onClick={() => lightbox.openLightbox(item, allImages, lightboxIndex)}
+                            >
                               {isGif(item.image) ? (
                                 <img
                                   src={item.image}
                                   alt={item.caption || title}
-                                  className="w-full h-auto"
+                                  className="w-full h-auto max-h-[500px] object-contain mx-auto"
                                   style={{ display: 'block' }}
                                 />
                               ) : (
-                                <Image
-                                  src={item.image}
-                                  alt={item.caption || title}
-                                  width={320}
-                                  height={693}
-                                  className="w-full h-auto"
-                                />
+                                <div className="relative aspect-video">
+                                  <Image
+                                    src={item.image}
+                                    alt={item.caption || title}
+                                    fill
+                                    className="object-contain"
+                                    sizes="(max-width: 1024px) 100vw, 75vw"
+                                  />
+                                </div>
                               )}
-                            </PhoneFrame>
-                          </div>
-                        ) : (
-                          // Regular image
-                          <div style={{ backgroundColor: 'var(--bg-base)' }}>
-                            {isGif(item.image) ? (
-                              <img
-                                src={item.image}
-                                alt={item.caption || title}
-                                className="w-full h-auto max-h-[500px] object-contain mx-auto"
-                                style={{ display: 'block' }}
-                              />
-                            ) : (
-                              <div className="relative aspect-video">
-                                <Image
-                                  src={item.image}
-                                  alt={item.caption || title}
-                                  fill
-                                  className="object-contain"
-                                  sizes="(max-width: 1024px) 100vw, 75vw"
-                                />
+                              {/* Zoom indicator */}
+                              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/10">
+                                <div className="p-3 rounded-full bg-black/50 text-white">
+                                  <HiOutlineZoomIn size={28} />
+                                </div>
                               </div>
-                            )}
-                          </div>
-                        )}
-                        {item.caption && (
-                          <p 
-                            className="p-4 text-sm border-t"
-                            style={{ color: 'var(--muted)', borderColor: 'var(--border-muted)' }}
-                          >
-                            {item.caption}
-                          </p>
-                        )}
-                      </div>
-                    ))}
+                            </div>
+                          )}
+                          {item.caption && (
+                            <p 
+                              className="p-4 text-sm border-t"
+                              style={{ color: 'var(--muted)', borderColor: 'var(--border-muted)' }}
+                            >
+                              {item.caption}
+                            </p>
+                          )}
+                        </div>
+                      )
+                    })}
                   </div>
                 </motion.section>
               )}
@@ -384,6 +427,17 @@ const ProjectLayout = ({
           </div>
         </div>
       </article>
+
+      {/* Lightbox for image zoom */}
+      <Lightbox
+        isOpen={lightbox.isOpen}
+        currentImage={lightbox.currentImage}
+        images={lightbox.images}
+        currentIndex={lightbox.currentIndex}
+        onClose={lightbox.closeLightbox}
+        onNext={lightbox.goNext}
+        onPrev={lightbox.goPrev}
+      />
     </>
   )
 }

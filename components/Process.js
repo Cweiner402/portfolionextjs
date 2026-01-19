@@ -108,9 +108,9 @@ const Process = () => {
 
   return (
     <section id="process" className="section relative overflow-hidden">
-      {/* Subtle grid background */}
+      {/* Subtle grid background - pointer-events-none so they don't block clicks */}
       <div 
-        className="absolute inset-0 opacity-[0.02]"
+        className="absolute inset-0 opacity-[0.02] pointer-events-none"
         style={{
           backgroundImage: `
             linear-gradient(var(--accent) 1px, transparent 1px),
@@ -121,8 +121,8 @@ const Process = () => {
       />
       
       {/* Glow effects */}
-      <div className="glow glow-accent w-[500px] h-[500px] -top-64 -right-64" />
-      <div className="glow glow-highlight w-[400px] h-[400px] -bottom-32 -left-32" />
+      <div className="glow glow-accent w-[500px] h-[500px] -top-64 -right-64 pointer-events-none" />
+      <div className="glow glow-highlight w-[400px] h-[400px] -bottom-32 -left-32 pointer-events-none" />
       
       <div className="wrapper relative">
         <motion.div

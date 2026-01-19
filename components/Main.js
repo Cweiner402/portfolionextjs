@@ -15,9 +15,9 @@ const Main = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Blueprint grid background */}
+      {/* Blueprint grid background - pointer-events-none so it doesn't block clicks */}
       <div 
-        className="absolute inset-0"
+        className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage: `
             linear-gradient(var(--blueprint-grid) 1px, transparent 1px),
