@@ -102,13 +102,13 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled
+        scrolled || nav
           ? 'py-3 backdrop-blur-lg border-b'
           : 'py-5'
       }`}
       style={{
-        backgroundColor: scrolled ? 'rgba(15, 23, 42, 0.9)' : 'transparent',
-        borderColor: scrolled ? 'var(--border-muted)' : 'transparent'
+        backgroundColor: scrolled || nav ? 'var(--bg-base)' : 'transparent',
+        borderColor: scrolled || nav ? 'var(--border-muted)' : 'transparent'
       }}
     >
       <div className="wrapper flex justify-between items-center">

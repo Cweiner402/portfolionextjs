@@ -5,10 +5,10 @@ export default function Document() {
     <Html lang="en">
       <Head>
         {/* Favicon */}
-        <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
+        <link rel="icon" type="image/png" sizes="64x64" href="/favicon-square.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-square.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon-square.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/favicon-square.png" />
         
         {/* Preconnect for faster font loading */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
