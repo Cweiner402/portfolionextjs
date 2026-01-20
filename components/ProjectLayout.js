@@ -334,12 +334,13 @@ const ProjectLayout = ({
                                   style={{ display: 'block' }}
                                 />
                               ) : (
-                                <div className="relative aspect-video">
+                                // Tall images use aspect-[3/4] to show more content, regular images use aspect-video
+                                <div className={`relative ${item.isTall ? 'aspect-[3/4]' : 'aspect-video'}`}>
                                   <Image
                                     src={item.image}
                                     alt={item.caption || title}
                                     fill
-                                    className="object-contain"
+                                    className={item.isTall ? 'object-contain object-top' : 'object-contain'}
                                     sizes="(max-width: 1024px) 100vw, 75vw"
                                   />
                                 </div>

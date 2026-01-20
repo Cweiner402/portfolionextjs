@@ -46,8 +46,8 @@ export default function CanadaModernization() {
       gallery={[
         { image: '/images/projects/CanadaPortalHomepage.png', caption: 'Citizen portal homepage with BC Services Card SSO login - Light Mode' },
         { image: '/images/canada/CanadaPortalHomepageDarkMode.png', caption: 'Citizen portal homepage with BC Services Card SSO login - Dark Mode' },
-        { image: '/images/canada/CanadaSubmitcomplaintLightMode.png', caption: 'Complaint submission form with authenticated user session - Light Mode' },
-        { image: '/images/canada/CanadaSubmitComplaintDarkMode.png', caption: 'Complaint submission form with authenticated user session - Dark Mode' },
+        { image: '/images/canada/CanadaSubmitcomplaintLightMode.png', caption: 'Complaint submission form with unauthenticated user session - Light Mode', isTall: true },
+        { image: '/images/canada/CanadaSubmitComplaintDarkMode.png', caption: 'Complaint submission form with unauthenticated user session - Dark Mode', isTall: true },
       ]}
     />
   )
