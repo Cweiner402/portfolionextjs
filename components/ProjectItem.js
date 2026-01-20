@@ -12,6 +12,7 @@ const ProjectItem = ({
   projectUrl, 
   metric,
   metricLabel,
+  isMobileApp = false,
   index = 0 
 }) => {
   const isGif = typeof backgroundImg === 'string' && backgroundImg.endsWith('.gif')
@@ -26,8 +27,50 @@ const ProjectItem = ({
       <Link href={projectUrl}>
         <div className="card group overflow-hidden cursor-pointer">
           {/* Image container */}
-          <div className="relative aspect-[16/10] overflow-hidden" style={{ backgroundColor: 'var(--bg-elevated)' }}>
-            {isGif ? (
+          <div 
+            className="relative aspect-[16/10] overflow-hidden flex items-center justify-center" 
+            style={{ 
+              backgroundColor: isMobileApp ? 'var(--bg-base)' : 'var(--bg-elevated)',
+              background: isMobileApp 
+                ? 'radial-gradient(circle at center, color-mix(in srgb, var(--accent) 5%, var(--bg-base)) 0%, var(--bg-base) 70%)' 
+                : undefined
+            }}
+          >
+            {isMobileApp ? (
+              // Mobile app phone frame preview
+              <div className="relative h-[85%] aspect-[9/19] group-hover:scale-105 transition-transform duration-500">
+                {/* Phone frame */}
+                <div 
+                  className="absolute inset-0 rounded-[24px] border-4 shadow-2xl overflow-hidden"
+                  style={{ 
+                    borderColor: '#2a2a2a',
+                    backgroundColor: '#1a1a1a',
+                    boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255,255,255,0.1)'
+                  }}
+                >
+                  {/* Notch */}
+                  <div 
+                    className="absolute top-1 left-1/2 -translate-x-1/2 w-16 h-4 rounded-full z-10"
+                    style={{ backgroundColor: '#1a1a1a' }}
+                  />
+                  {/* Screen content */}
+                  <div className="absolute inset-1 rounded-[20px] overflow-hidden">
+                    <img
+                      src={backgroundImg}
+                      alt={title}
+                      className="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                </div>
+                {/* Phone reflection/shine */}
+                <div 
+                  className="absolute inset-0 rounded-[24px] pointer-events-none"
+                  style={{ 
+                    background: 'linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%)'
+                  }}
+                />
+              </div>
+            ) : isGif ? (
               // Use native img for GIFs to preserve animation
               <img
                 src={backgroundImg}
@@ -43,14 +86,32 @@ const ProjectItem = ({
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
             )}
-            {/* Gradient overlay */}
-            <div 
-              className="absolute inset-0" 
-              style={{ background: 'linear-gradient(to top, var(--bg-base), color-mix(in srgb, var(--bg-base) 50%, transparent), transparent)' }}
-            />
             
-            {/* GIF indicator */}
-            {isGif && (
+            {/* Gradient overlay - skip for mobile app */}
+            {!isMobileApp && (
+              <div 
+                className="absolute inset-0" 
+                style={{ background: 'linear-gradient(to top, var(--bg-base), color-mix(in srgb, var(--bg-base) 50%, transparent), transparent)' }}
+              />
+            )}
+            
+            {/* Mobile app CTA badge */}
+            {isMobileApp && (
+              <div 
+                className="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full flex items-center gap-2 text-sm font-medium border backdrop-blur-sm"
+                style={{ 
+                  backgroundColor: 'color-mix(in srgb, var(--accent) 15%, var(--bg-base))', 
+                  borderColor: 'var(--accent)',
+                  color: 'var(--accent)'
+                }}
+              >
+                <HiOutlinePlay size={14} />
+                <span>View Live Demo</span>
+              </div>
+            )}
+            
+            {/* GIF indicator - only for non-mobile GIFs */}
+            {isGif && !isMobileApp && (
               <div 
                 className="absolute top-4 left-4 px-2 py-1 rounded-md flex items-center gap-1 text-xs font-medium"
                 style={{ backgroundColor: 'color-mix(in srgb, var(--bg-base) 80%, transparent)', color: 'var(--accent)' }}

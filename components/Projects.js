@@ -11,6 +11,7 @@ const projects = [
     backgroundImg: '/images/projects/mobilereactnativefindmycar.gif',
     tags: ['React Native', 'Expo', 'AWS Lambda', 'TypeScript', 'Shopify API', 'Salesforce API'],
     projectUrl: '/projects/museum-mobile',
+    isMobileApp: true,
   },
   {
     title: 'Government of Canada Modernization',
