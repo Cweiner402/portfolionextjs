@@ -172,20 +172,7 @@ const Main = () => {
         </motion.div>
       </motion.button>
 
-      {/* Blueprint corner annotations */}
-      <div className="absolute top-24 left-8 hidden lg:block">
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 1.2 }}
-          className="flex items-center gap-2 text-xs font-mono"
-          style={{ color: 'var(--muted-foreground)' }}
-        >
-          <div className="w-8 h-px" style={{ backgroundColor: 'var(--border)' }} />
-          <span>01 — Hero Section</span>
-        </motion.div>
-      </div>
-
+      {/* Blueprint corner annotation */}
       <div className="absolute bottom-24 right-8 hidden lg:block">
         <motion.div
           initial={{ opacity: 0, x: 20 }}
